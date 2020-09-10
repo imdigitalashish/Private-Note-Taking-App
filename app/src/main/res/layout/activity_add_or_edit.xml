@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddOrEditActivity">
+
+    <EditText
+        android:id="@+id/your_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Enter Your Task" />
+
+    <TextView
+        android:id="@+id/text_view_priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/your_task"
+        android:layout_marginLeft="20dp"
+        android:text="Priority"
+        android:textColor="#00ED0A"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/priority_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_priority"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rd_btn_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High" />
+
+        <RadioButton
+            android:id="@+id/rd_btn_low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low" />
+
+        <RadioButton
+            android:id="@+id/rd_btn_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/priority_group"
+        android:id="@+id/text_view_duedate"
+        android:text="Due Date"
+        android:layout_marginLeft="20dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#00ED0A" />
+
+    <RadioGroup
+        android:id="@+id/due_date_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/priority_group"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/noDueDate"
+            android:text="No Due Date" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dueDate"
+            android:text="Due Date" />
+
+
+    </RadioGroup>
+
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        android:id="@+id/datePicker"
+        android:layout_below="@id/due_date_mode"
+        android:layout_alignParentRight="true"
+
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:text="Add my Task"
+        android:background="#3F51B5"
+        android:onClick="addMyTask"
+        android:id="@+id/btnSave"
+        android:textColor="#FFF"
+        />
+
+
+
+
+</RelativeLayout>
